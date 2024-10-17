@@ -1,0 +1,93 @@
+/* 
+Compile this file to css/custom_GIMpT3uk.css using any SCSS preprocessor. 
+More information here: https://slides.gitbook.io/manual/scss
+*/
+
+@import "mixins.scss"; 
+@import "variables.scss";
+@import "variables-custom.scss";
+
+/* PRICING (#2) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-83-492aa022"] */
+.slide[data-cid="slide-83-492aa022"]{
+  .price {
+    font-size: 110px;
+    line-height: 1.26;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+  .currency {
+    font-size: 32px;
+    vertical-align: super;
+    font-weight: 300;
+    padding-right: 10px;
+    margin-left: -0.8em;
+    font-weight: 300;
+    opacity: 0.6;
+    position: relative;
+    top: -0.5em;
+  }
+  &.whiteSlide .flex.flex-83{
+    @include media($tablet, min) {
+      box-shadow: 0 0 1px rgba(48,48,48,0.54);
+    }
+  }
+  .flex.flex-83 {
+    color: $default-text-color;
+    margin-top: 50px;
+    @include media($tablet, min) {
+      border-radius: $rounded-border-radius;
+      overflow: hidden;
+    }
+    @include media($tablet, max) {
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    > [class*='col-'] {
+      position: relative;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: -1px 0 0 #EBEBEB inset;
+      @include media($tablet, max) {
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 0 1px rgba(48,48,48,0.54);
+        border-radius: $rounded-border-radius;
+      }
+      @include media($tablet, min) {
+        padding: 40px;
+        border-radius: 0px;
+        &:last-child {
+          box-shadow: none;
+        }
+      }
+      ul.p {
+        line-height: 1.75;
+      }
+    }
+  }
+}
+
+/* ABOUT US (#3) */
+/* To restrict styles to the current slide, panel, or example use .slide[data-cid="slide-140-8e8f19f1"] */
+.slide[data-cid="slide-140-8e8f19f1"]{
+  &.whiteSlide .controller-140 .dot:after{
+    background: $default-white-color !important;
+  }
+}
+.round {
+  border-radius: 50%; /* Makes the image round */
+  overflow: hidden; /* Ensures no parts overflow */
+}
+
+/* BOOK/CONTACT US (#4) */
+.email-link {
+  color: blue;
+  text-decoration: underline;
+  font-weight:bold;
+  font-style:italic;/* This ensures the link is visibly clickable */
+}
+.email-link:hover {
+  color: darkblue; /* Optional: change color when hovering */
+}
